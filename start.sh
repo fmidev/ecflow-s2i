@@ -13,7 +13,7 @@ load-defs.sh
 
 set +u
 
-for v in "ECF_RESTAPI_HOST" "ECF_RESTAPI_PORT" "ECF_LOGHOST" "ECF_LOGPORT"; do
+for v in "ECF_RESTAPI_HOST" "ECF_RESTAPI_PORT" "ECF_LOGHOST" "ECF_LOGPORT" "FMI_ENV"; do
   eval test "x" != x\$$v && eval ecflow_client --alter add variable "$v" "\$$v" /
 done
 
