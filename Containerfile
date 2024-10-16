@@ -5,7 +5,7 @@ RUN rpm -ivh https://download.fmi.fi/fmiforge/rhel/8/x86_64/fmiforge-release-lat
              https://download.postgresql.org/pub/repos/yum/reporpms/EL-8-x86_64/pgdg-redhat-repo-latest.noarch.rpm && \
     dnf -y install dnf-plugins-core && \
     dnf config-manager --set-enabled powertools && \
-    dnf config-manager --set-disabled pgdg11 pgdg12 pgdg13 pgdg16 && \
+    dnf config-manager --set-disabled pgdg12 pgdg13 pgdg16 pgdg17 && \
     dnf -y module disable postgresql && \
     dnf config-manager --setopt="epel.exclude=eccodes*" --save && \
     dnf -y install ecflow5 ecflow5-server ecflow5-http ecflow5-python ecflow-scripts findutils && \
