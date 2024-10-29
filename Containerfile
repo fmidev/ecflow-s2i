@@ -9,6 +9,7 @@ RUN rpm -ivh https://download.fmi.fi/fmiforge/rhel/8/x86_64/fmiforge-release-lat
     dnf -y module disable postgresql && \
     dnf config-manager --setopt="epel.exclude=eccodes*" --save && \
     dnf -y install ecflow5 ecflow5-server ecflow5-http ecflow5-python ecflow-scripts findutils && \
+    dnf -y install python3-ecflow-openshift-agent && \
     dnf -y clean all
 
 ENV PYTHONPATH /usr/ecflow5/lib/python3.6/site-packages/
